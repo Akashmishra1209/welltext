@@ -9,7 +9,7 @@ import { isAuthenticated } from './auth';
 import Addblog from './Addblog';
 import ListBlog from './ListBlog';
 import ToDo from './ToDo';
-
+import Stopwatch from "./Stopwatch"
 
 const Admin = () => {
     useEffect(() => {
@@ -30,6 +30,7 @@ const Admin = () => {
                     <Route path="add" element={<Addblog/>}/>
                     <Route path="list" element={<ListBlog/>}/>
                     <Route path="todo" element={<ToDo/>}/>
+                    <Route path="stopwatch" element={<Stopwatch/>}/>
                 </Routes>
             </div>
         </div>

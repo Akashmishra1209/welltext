@@ -5,6 +5,7 @@ import { Drawer, List, ListItem, ListItemIcon, ListItemText, Typography, IconBut
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import PeopleIcon from '@mui/icons-material/People';
 import SettingsIcon from '@mui/icons-material/Settings';
+import { AccessAlarm } from '@mui/icons-material';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { Done, Edit, Newspaper } from '@mui/icons-material';
 
@@ -55,6 +56,12 @@ export default function Sidebar() {
               <Done />
             </ListItemIcon>
             <ListItemText primary="To Do" />
+          </ListItem>
+          <ListItem button component={NavLink} to="/admin/stopwatch">
+            <ListItemIcon>
+              <AccessAlarm />
+            </ListItemIcon>
+            <ListItemText primary="Clock" />
           </ListItem>
           <ListItem button onClick={handleLogout}>
             <ListItemIcon>
