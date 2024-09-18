@@ -5,7 +5,7 @@ import { Drawer, List, ListItem, ListItemIcon, ListItemText, Typography, IconBut
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import PeopleIcon from '@mui/icons-material/People';
 import SettingsIcon from '@mui/icons-material/Settings';
-import { AccessAlarm } from '@mui/icons-material';
+import { AccessAlarm, Bookmark, Calculate } from '@mui/icons-material';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { Done, Edit, Newspaper } from '@mui/icons-material';
 
@@ -62,6 +62,18 @@ export default function Sidebar() {
               <AccessAlarm />
             </ListItemIcon>
             <ListItemText primary="Clock" />
+          </ListItem>
+          <ListItem button component={NavLink} to="/admin/calculator">
+            <ListItemIcon>
+              <Calculate />
+            </ListItemIcon>
+            <ListItemText primary="Calculator" />
+          </ListItem>
+          <ListItem button component={NavLink} to="/admin/bmanager">
+            <ListItemIcon>
+              <Bookmark />
+            </ListItemIcon>
+            <ListItemText primary="Bookmark" />
           </ListItem>
           <ListItem button onClick={handleLogout}>
             <ListItemIcon>

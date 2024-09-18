@@ -10,6 +10,8 @@ import Addblog from './Addblog';
 import ListBlog from './ListBlog';
 import ToDo from './ToDo';
 import Stopwatch from "./Stopwatch"
+import Calculator from "./Calculator"
+import BookmarkManager from './BookmarkManager';
 
 const Admin = () => {
     useEffect(() => {
@@ -31,6 +33,8 @@ const Admin = () => {
                     <Route path="list" element={<ListBlog/>}/>
                     <Route path="todo" element={<ToDo/>}/>
                     <Route path="stopwatch" element={<Stopwatch/>}/>
+                    <Route path="calculator" element={<Calculator/>}/>
+                    <Route path="bmanager" element={<BookmarkManager/>}/>
                 </Routes>
             </div>
         </div>
