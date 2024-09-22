@@ -5,7 +5,7 @@ import { Drawer, List, ListItem, ListItemIcon, ListItemText, Typography, IconBut
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import PeopleIcon from '@mui/icons-material/People';
 import SettingsIcon from '@mui/icons-material/Settings';
-import { AccessAlarm, Bookmark, Calculate } from '@mui/icons-material';
+import { AccessAlarm, Bookmark, Calculate, QrCode } from '@mui/icons-material';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { Done, Edit, Newspaper } from '@mui/icons-material';
 
@@ -74,6 +74,12 @@ export default function Sidebar() {
               <Bookmark />
             </ListItemIcon>
             <ListItemText primary="Bookmark" />
+          </ListItem>
+          <ListItem button component={NavLink} to="/admin/qrcode">
+            <ListItemIcon>
+              <QrCode />
+            </ListItemIcon>
+            <ListItemText primary="QR Code" />
           </ListItem>
           <ListItem button onClick={handleLogout}>
             <ListItemIcon>

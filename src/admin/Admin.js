@@ -12,6 +12,7 @@ import ToDo from './ToDo';
 import Stopwatch from "./Stopwatch"
 import Calculator from "./Calculator"
 import BookmarkManager from './BookmarkManager';
+import QRCodeGenerator from './QRCodeGenerator';
 
 const Admin = () => {
     useEffect(() => {
@@ -35,6 +36,7 @@ const Admin = () => {
                     <Route path="stopwatch" element={<Stopwatch/>}/>
                     <Route path="calculator" element={<Calculator/>}/>
                     <Route path="bmanager" element={<BookmarkManager/>}/>
+                    <Route path="qrcode" element={<QRCodeGenerator/>}/>
                 </Routes>
             </div>
         </div>
