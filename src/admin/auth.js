@@ -16,7 +16,7 @@ export const login = (email, password) => {
 };
 
 export const isAuthenticated = () => {
-    return localStorage.getItem('isAuthenticated') === 'true';
+    return localStorage.getItem('isAuthenticated') == 'true';
 };
 
 export const logout = () => {
