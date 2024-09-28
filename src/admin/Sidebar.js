@@ -5,7 +5,7 @@ import { Drawer, List, ListItem, ListItemIcon, ListItemText, Typography, IconBut
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import PeopleIcon from '@mui/icons-material/People';
 import SettingsIcon from '@mui/icons-material/Settings';
-import { AccessAlarm, Bookmark, Calculate, QrCode } from '@mui/icons-material';
+import { AccessAlarm, Bookmark, Calculate, Gesture, QrCode } from '@mui/icons-material';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { Done, Edit, Newspaper } from '@mui/icons-material';
 
@@ -50,8 +50,8 @@ export default function Sidebar() {
             </ListItemIcon>
             <ListItemText primary="Settings" />
           </ListItem>
-              <Typography variant="h6" className='ml-4'>Apps</Typography>
-              <ListItem button component={NavLink} to="/admin/todo">
+          <Typography variant="h6" className='ml-4'>Apps</Typography>
+          <ListItem button component={NavLink} to="/admin/todo">
             <ListItemIcon>
               <Done />
             </ListItemIcon>
@@ -80,6 +80,12 @@ export default function Sidebar() {
               <QrCode />
             </ListItemIcon>
             <ListItemText primary="QR Code" />
+          </ListItem>
+          <ListItem button component={NavLink} to="/admin/whiteboard">
+            <ListItemIcon>
+              <Gesture />
+            </ListItemIcon>
+            <ListItemText primary="Whiteboard" />
           </ListItem>
           <ListItem button onClick={handleLogout}>
             <ListItemIcon>

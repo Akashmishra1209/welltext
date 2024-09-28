@@ -13,6 +13,7 @@ import Stopwatch from "./Stopwatch"
 import Calculator from "./Calculator"
 import BookmarkManager from './BookmarkManager';
 import QRCodeGenerator from './QRCodeGenerator';
+import Whiteboard from "./Whiteboard"
 
 const Admin = () => {
     useEffect(() => {
@@ -37,6 +38,7 @@ const Admin = () => {
                     <Route path="calculator" element={<Calculator/>}/>
                     <Route path="bmanager" element={<BookmarkManager/>}/>
                     <Route path="qrcode" element={<QRCodeGenerator/>}/>
+                    <Route path="whiteboard" element={<Whiteboard/>}/>
                 </Routes>
             </div>
         </div>
