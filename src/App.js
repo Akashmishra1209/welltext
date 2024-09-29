@@ -25,6 +25,7 @@ import Calendar from './components/Calendar';
 import { useAuth0 } from '@auth0/auth0-react';
 import TerminalComponent from './components/TerminalComponent';
 import Todo from './components/Todo';
+import GitHubProfile from './components/GithubProfile';
 function App() {
   const [alert, setalert] = useState(null);
   const { user, isAuthenticated } = useAuth0()
@@ -82,6 +83,7 @@ function App() {
           <Route path="/account" element={<Account />} />
           <Route path="/terminal" element={<TerminalComponent />} />
           <Route path="/todo" element={<Todo />} />
+          <Route path="/github" element={<GitHubProfile />} />
           <Route path="/admin/*" element={isAdminAuthenticated() ? <Admin /> : <Navigate to="/login" />}/>
           <Route path="/login" element={<Login/>}/>
           <Route path="/update/:uid" element={<Post mode={mode} togglemode={togglemode} showalert={showalert} />} />
