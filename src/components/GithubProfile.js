@@ -63,16 +63,16 @@ export default function GitHubProfile() {
           fetch('https://api.github.com/users/Akashmishra1209'),
           fetch('https://api.github.com/users/Akashmishra1209/repos?sort=updated&per_page=5')
         ])
-        
+
         if (!profileResponse.ok || !reposResponse.ok) {
           throw new Error(`HTTP error! status: ${profileResponse.status}, ${reposResponse.status}`)
         }
-        
+
         const [profileData, reposData] = await Promise.all([
           profileResponse.json(),
           reposResponse.json()
         ])
-        
+
         setProfile(profileData)
         setRepos(reposData)
       } catch (e) {
@@ -139,7 +139,6 @@ export default function GitHubProfile() {
             </Box>
           </Box>
         </Paper>
-
         <Grid container spacing={3}>
           <StatBox icon={<People />} value={profile.followers} label="Followers" />
           <StatBox icon={<People />} value={profile.following} label="Following" />
@@ -147,8 +146,15 @@ export default function GitHubProfile() {
           <StatBox icon={<Star />} value={profile.public_gists} label="Gists" />
           <StatBox icon={<CallSplit />} value={profile.public_repos} label="Pull Requests" />
           <StatBox icon={<Star />} value={repos.reduce((sum, repo) => sum + repo.stargazers_count, 0)} label="Total Stars" />
+          <StatBox icon={<Code />} value={profile.contributions || 'N/A'} label="Contributions" />
+          <StatBox icon={<GitHub />} value={profile.open_issues || 'N/A'} label="Issues Opened" />
+          <StatBox icon={<Star />} value={profile.watchers_count || 'N/A'} label="Watchers" />
           <StatBox icon={<EmojiEvents />} value={profile.public_repos} label="Achievements" />
           <StatBox icon={<Code />} value={repos.reduce((sum, repo) => sum + repo.size, 0)} label="Total Code Size (KB)" />
+          <StatBox icon={<Code />} value={Object.keys(repos.reduce((langs, repo) => {
+            if (repo.language) langs[repo.language] = true;
+            return langs;
+          }, {})).join(', ') || 'N/A'} label="Languages Used" />
         </Grid>
 
         <Box mt={3}>

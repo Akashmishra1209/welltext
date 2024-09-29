@@ -66,12 +66,12 @@ export default function Navbar(props) {
                 aria-expanded={open ? 'true' : undefined}
                 onClick={handleClick}
                 endIcon={<KeyboardArrowDownIcon />}
-                className={`text-${props.mode == 'light' ? 'secondary' : 'white'}`}
+                className={`text-${props.mode == 'light' ? 'secondary' : 'white'} text-capitalized`}
                 style={{
                   marginTop: "2.5px"
                 }}
               >
-                Menu
+                More
               </Button>
               <Menu
                 id="basic-menu"
@@ -87,7 +87,7 @@ export default function Navbar(props) {
                     to={"/github"}
                     className={`text-decoration-none ${props.mode === 'light' ? 'text-black' : 'text-secondary'}`}
                   >
-                    Profile
+                    My Profile
                   </Link>
                 </MenuItem>
               </Menu>
