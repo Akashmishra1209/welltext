@@ -35,10 +35,13 @@ export default function Navbar(props) {
               <Link className="nav-link" aria-current="page" to="/">Home</Link>
             </li>
             <li className="nav-item">
+              <Link className="nav-link" to="/tools">Tools</Link>
+            </li>
+            <li className="nav-item">
               <Link className="nav-link" to="/about">About</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" aria-current="page" to="/tools">Tools</Link>
+              <Link className="nav-link" aria-current="page" to="/features">Features</Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" aria-current="page" to="/download">Download</Link>
@@ -54,9 +57,6 @@ export default function Navbar(props) {
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/terminal">Terminal</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/contact">Contact Us</Link>
             </li>
             <li className="nav-item">
               <Button
@@ -82,6 +82,14 @@ export default function Navbar(props) {
                   'aria-labelledby': 'basic-button',
                 }}
               >
+                <MenuItem>
+                  <Link
+                    to={"/contact"}
+                    className={`text-decoration-none ${props.mode === 'light' ? 'text-black' : 'text-secondary'}`}
+                  >
+                    Contact Us
+                  </Link>
+                </MenuItem>
                 <MenuItem>
                   <Link
                     to={"/github"}

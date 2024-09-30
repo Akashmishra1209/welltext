@@ -26,6 +26,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import TerminalComponent from './components/TerminalComponent';
 import Todo from './components/Todo';
 import GitHubProfile from './components/GithubProfile';
+import HomePage from './components/HomePage';
 function App() {
   const [alert, setalert] = useState(null);
   const { user, isAuthenticated } = useAuth0()
@@ -68,10 +69,12 @@ function App() {
           <Alert alert={alert} />
 
         </div>
-        <Routes> <Route path="/" element={<Form mode={mode} togglemode={togglemode} showalert={showalert} />} />
+        <Routes> 
+          <Route path="/" element={<HomePage mode={mode} togglemode={togglemode} showalert={showalert} />} />
+          <Route path="/tools" element={<Form mode={mode} togglemode={togglemode} showalert={showalert} />} />
           <Route path="/about" element={<About mode={mode} togglemode={togglemode} />} />
           <Route path="/contact" element={<Contact mode={mode} togglemode={togglemode} />} />
-          <Route path="/tools" element={<Tools mode={mode} togglemode={togglemode} showalert={showalert} />} />
+          <Route path="/features" element={<Tools mode={mode} togglemode={togglemode} showalert={showalert} />} />
           <Route path="/updates" element={<New mode={mode} togglemode={togglemode} showalert={showalert} />} />
           <Route path="/download" element={<Download mode={mode} togglemode={togglemode} showalert={showalert} />} />
           <Route path="/editor" element={<RichEditor mode={mode} togglemode={togglemode} showalert={showalert} />} />
