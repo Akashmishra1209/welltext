@@ -12,13 +12,16 @@ const Login = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        login(email,password)
-        if (login(email, password)) {
-            navigate('/admin/dashboard');
+
+        const isLoggedIn = login(email, password); // Store result of login attempt
+
+        if (isLoggedIn) {
+            navigate('/admin/dashboard'); // Navigate to dashboard if login is successful
         } else {
-            setError('Invalid email or password');
+            setError('Invalid email or password'); // Show error if login fails
         }
     };
+
 
     return (
         <div className="container mt-5">
@@ -33,7 +36,7 @@ const Login = () => {
                         placeholder="Enter email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                    /> 
+                    />
                 </div>
                 <div className="mb-3">
                     <label htmlFor="password" className="form-label">Password</label>

@@ -7,6 +7,7 @@ const users = [
 export const login = (email, password) => {
     const user = users.find(user => user.email == email && user.password == password);
     if (user) {
+        console.log("User Logged In")
         localStorage.setItem('isAuthenticated', 'true');
         return true;
     }
