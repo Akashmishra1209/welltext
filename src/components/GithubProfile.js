@@ -136,6 +136,20 @@ export default function GitHubProfile() {
               {profile.location && <InfoChip icon={<LocationOn />} label={profile.location} />}
               {profile.blog && <InfoChip icon={<LinkIcon />} label={profile.blog} />}
               <InfoChip icon={<CalendarToday />} label={`Joined ${profile.created_at ? new Date(profile.created_at).toLocaleDateString() : 'N/A'}`} />
+              <InfoChip
+                icon={<GitHub />}
+                label={
+                  <a
+                    href='https://github.com/Akashmishra1209/'
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ textDecoration: 'none', color: 'inherit' }}
+                  >
+                   View Github
+                  </a>
+                }
+              />
+
             </Box>
           </Box>
         </Paper>
