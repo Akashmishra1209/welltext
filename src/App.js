@@ -88,7 +88,7 @@ function App() {
           <Route path="/terminal" element={<TerminalComponent />} />
           <Route path="/todo" element={<Todo />} />
           <Route path="/github" element={<GitHubProfile />} />
-          <Route path="/fancytext" element={<FancyText />} />
+          <Route path="/fancytext" element={<FancyText mode={mode}/>} />
           <Route path="/admin/*" element={isAdminAuthenticated() ? <Admin /> : <Navigate to="/login" />}/>
           <Route path="/login" element={<Login/>}/>
           <Route path="/update/:uid" element={<Post mode={mode} togglemode={togglemode} showalert={showalert} />} />

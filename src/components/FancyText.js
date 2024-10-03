@@ -2,7 +2,7 @@ import React from 'react'
 import "../App.css"
 import $ from "jquery"
 
-export default function FancyText() {
+export default function FancyText(props) {
     String.prototype.fancy = function() {
         var translate_re = /[ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890]/g;
         var translate = {"A":"𝙰","B":"𝙱","C":"𝙲","D":"𝙳","E":"𝙴","F":"𝙵","G":"𝙶","H":"𝙷","I":"𝙸","J":"𝙹","K":"𝙺","L":"𝙻","M":"𝙼","N":"𝙽","O":"𝙾","P":"𝙿","Q":"𝚀","R":"𝚁","S":"𝚂","T":"𝚃","U":"𝚄","V":"𝚅","W":"𝚆","X":"𝚇","Y":"𝚈","Z":"𝚉","a":"𝚊","b":"𝚋","c":"𝚌","d":"𝚍","e":"𝚎","f":"𝚏","g":"𝚐","h":"𝚑","i":"𝚒","j":"𝚓","k":"𝚔","l":"𝚕","m":"𝚖","n":"𝚗","o":"𝚘","p":"𝚙","q":"𝚚","r":"𝚛","s":"𝚜","t":"𝚝","u":"𝚞","v":"𝚟","w":"𝚠","x":"𝚡","y":"𝚢","z":"𝚣","1":"𝟷","2":"𝟸","3":"𝟹","4":"𝟺","5":"𝟻","6":"𝟼","7":"𝟽","8":"𝟾","9":"𝟿","0":"𝟶"};
@@ -346,12 +346,12 @@ export default function FancyText() {
     
   return (
     <div>
-      <div class="container h-75 d-flex justify-content-center main-content">
+      <div class={`container h-75 d-flex justify-content-center main-content bg-${props.mode=='light'?'light':'dark'}`}>
   <div class="mt-auto mb-6">
     <div class="row text-center">
       <div class="col">
         <div class="jumbotron bg-dark mt-5 p-4" style={{height: "auto",width: "auto"}}  id="main-content">
-
+<h1 className='text-white'>Explore Our Fancy Text Generator</h1>
           <div class="row text-center">
             <div class="col">
               <select class="form-control form-control-lg font-list">
