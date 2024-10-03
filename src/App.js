@@ -27,6 +27,7 @@ import TerminalComponent from './components/TerminalComponent';
 import Todo from './components/Todo';
 import GitHubProfile from './components/GithubProfile';
 import HomePage from './components/HomePage';
+import FancyText from './components/FancyText';
 function App() {
   const [alert, setalert] = useState(null);
   const { user, isAuthenticated } = useAuth0()
@@ -87,6 +88,7 @@ function App() {
           <Route path="/terminal" element={<TerminalComponent />} />
           <Route path="/todo" element={<Todo />} />
           <Route path="/github" element={<GitHubProfile />} />
+          <Route path="/fancytext" element={<FancyText />} />
           <Route path="/admin/*" element={isAdminAuthenticated() ? <Admin /> : <Navigate to="/login" />}/>
           <Route path="/login" element={<Login/>}/>
           <Route path="/update/:uid" element={<Post mode={mode} togglemode={togglemode} showalert={showalert} />} />

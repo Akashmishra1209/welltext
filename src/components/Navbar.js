@@ -84,6 +84,14 @@ export default function Navbar(props) {
               >
                 <MenuItem>
                   <Link
+                    to={"/fancytext"}
+                    className={`text-decoration-none ${props.mode === 'light' ? 'text-black' : 'text-secondary'}`}
+                  >
+                    Fancy Text
+                  </Link>
+                </MenuItem>
+                <MenuItem>
+                  <Link
                     to={"/contact"}
                     className={`text-decoration-none ${props.mode === 'light' ? 'text-black' : 'text-secondary'}`}
                   >
