@@ -15,6 +15,7 @@ import BookmarkManager from './BookmarkManager';
 import QRCodeGenerator from './QRCodeGenerator';
 import Whiteboard from "./Whiteboard"
 import { useMediaQuery } from '@mui/material';
+import Calendar from './Calendar';
 
 export default function Admin(){
     const isLargeDevice = useMediaQuery('(min-width:1200px)')
@@ -42,6 +43,7 @@ export default function Admin(){
                     <Route path="bmanager" element={<BookmarkManager />} />
                     <Route path="qrcode" element={<QRCodeGenerator />} />
                     <Route path="whiteboard" element={<Whiteboard />} />
+                    <Route path="calendar" element={<Calendar />} />
                 </Routes>
             </div>
         </div>

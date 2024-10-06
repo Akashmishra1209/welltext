@@ -5,7 +5,7 @@ import { Drawer, List, ListItem, ListItemIcon, ListItemText, Typography, IconBut
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import PeopleIcon from '@mui/icons-material/People';
 import SettingsIcon from '@mui/icons-material/Settings';
-import { AccessAlarm, Bookmark, Calculate, Gesture, QrCode } from '@mui/icons-material';
+import { AccessAlarm, Bookmark, Calculate, CalendarMonth, Gesture, QrCode } from '@mui/icons-material';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { Done, Edit, Newspaper, MenuRounded } from '@mui/icons-material';
 
@@ -105,6 +105,12 @@ export default function Sidebar() {
                 <Gesture />
               </ListItemIcon>
               <ListItemText primary="Whiteboard" />
+            </ListItem>
+            <ListItem button component={NavLink} to="/admin/calendar">
+              <ListItemIcon>
+                <CalendarMonth />
+              </ListItemIcon>
+              <ListItemText primary="Calendar" />
             </ListItem>
             <ListItem button onClick={handleLogout}>
               <ListItemIcon>
