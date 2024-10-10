@@ -100,6 +100,14 @@ export default function Navbar(props) {
                 </MenuItem>
                 <MenuItem>
                   <Link
+                    to={"/features-request"}
+                    className={`text-decoration-none ${props.mode === 'light' ? 'text-black' : 'text-secondary'}`}
+                  >
+                    Request Feature
+                  </Link>
+                </MenuItem>
+                <MenuItem>
+                  <Link
                     to={"/github"}
                     className={`text-decoration-none ${props.mode === 'light' ? 'text-black' : 'text-secondary'}`}
                   >
