@@ -16,6 +16,7 @@ import QRCodeGenerator from './QRCodeGenerator';
 import Whiteboard from "./Whiteboard"
 import { useMediaQuery } from '@mui/material';
 import Calendar from './Calendar';
+import RequestedFeatures from "./RequestedFeatures"
 
 export default function Admin(){
     const isLargeDevice = useMediaQuery('(min-width:1200px)')
@@ -44,6 +45,7 @@ export default function Admin(){
                     <Route path="qrcode" element={<QRCodeGenerator />} />
                     <Route path="whiteboard" element={<Whiteboard />} />
                     <Route path="calendar" element={<Calendar />} />
+                    <Route path="requested-features" element={<RequestedFeatures />} />
                 </Routes>
             </div>
         </div>

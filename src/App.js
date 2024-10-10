@@ -28,6 +28,7 @@ import Todo from './components/Todo';
 import GitHubProfile from './components/GithubProfile';
 import HomePage from './components/HomePage';
 import FancyText from './components/FancyText';
+import FeaturesRequest from './components/FeaturesRequest';
 function App() {
   const [alert, setalert] = useState(null);
   const { user, isAuthenticated } = useAuth0()
@@ -89,6 +90,7 @@ function App() {
           <Route path="/todo" element={<Todo />} />
           <Route path="/github" element={<GitHubProfile />} />
           <Route path="/fancytext" element={<FancyText mode={mode}/>} />
+          <Route path="/features-request" element={<FeaturesRequest mode={mode}/>} />
           <Route path="/admin/*" element={isAdminAuthenticated() ? <Admin /> : <Navigate to="/login" />}/>
           <Route path="/login" element={<Login/>}/>
           <Route path="/update/:uid" element={<Post mode={mode} togglemode={togglemode} showalert={showalert} />} />
