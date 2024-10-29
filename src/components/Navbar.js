@@ -23,6 +23,8 @@ export default function Navbar(props) {
   };
 
   return (
+    <>
+     <div className='fixed'>We’re enhancing the appearance to make everything look even better!</div>
     <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">WellText</Link>
@@ -149,5 +151,6 @@ export default function Navbar(props) {
         </div>
       </div>
     </nav>
+    </>
   );
 }
